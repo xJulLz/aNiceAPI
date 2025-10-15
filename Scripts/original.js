@@ -1,3 +1,3 @@
-function origins() {
-    document.getElementById("root").innerHTML = "original"
+function original(){
+    document.getElementById("root").innerHTML = "Original"
 }

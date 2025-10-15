@@ -30,12 +30,11 @@ function generarLista(arraypokemones) {
             <p>${arraypokemones[i].name}</p>
         </div>`;
     }
-
     return listaHTML;
 }
 
 function home() {
-    document.getElementById("root").innerHTML = ""
+    document.getElementById("root").innerHTML = "";
     //buscador
     const buscador = document.createElement("input");
     buscador.classList.add("c-buscador");
@@ -45,7 +44,7 @@ function home() {
             buscadorfuncion(buscador.value);
     });
 
-        //contenedor filtro
+    //contenedor filtro
     const tipos = [
         "normal", "fighting", "flying", "poison", "ground", "rock", "bug",
         "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice",
@@ -70,13 +69,11 @@ function home() {
 
     // Mostrar Lista de Pokemones
     const contenedorPokes = document.createElement("div");
-    contenedorPokes.id = "da-list";
+    contenedorPokes.id = "la-lista";
     
     contenedorPokes.innerHTML = generarLista(pokemones);
 
     document.getElementById("root").appendChild(buscador);
     document.getElementById("root").appendChild(contenedorFiltro);
     document.getElementById("root").appendChild(contenedorPokes);
-    
-    
 }
